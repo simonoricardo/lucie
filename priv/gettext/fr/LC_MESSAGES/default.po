@@ -1,0 +1,63 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n>1);\n"
+
+#: lib/lucie_web/components/core_components.ex:484
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "Actions"
+
+#: lib/lucie_web/components/core_components.ex:160
+#, elixir-autogen, elixir-format
+msgid "Attempting to reconnect"
+msgstr "Tentative de reconnexion"
+
+#: lib/lucie_web/components/core_components.ex:151
+#, elixir-autogen, elixir-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#: lib/lucie_web/components/core_components.ex:172
+#, elixir-autogen, elixir-format
+msgid "Hang in there while we get back on track"
+msgstr "SVP patienter pendant que nous rétablissons la connexion"
+
+#: lib/lucie_web/components/core_components.ex:167
+#, elixir-autogen, elixir-format
+msgid "Something went wrong!"
+msgstr "Une erreur s'est produite!"
+
+#: lib/lucie_web/components/core_components.ex:150
+#, elixir-autogen, elixir-format
+msgid "Success!"
+msgstr "Succès!"
+
+#: lib/lucie_web/components/core_components.ex:155
+#, elixir-autogen, elixir-format
+msgid "We can't find the internet"
+msgstr "Problème de connexion"
+
+#: lib/lucie_web/components/core_components.ex:76
+#: lib/lucie_web/components/core_components.ex:130
+#, elixir-autogen, elixir-format
+msgid "close"
+msgstr "Fermer"
+
+#: lib/lucie/accounts/user.ex:50
+#, elixir-autogen, elixir-format
+msgid "must have the @ sign and no spaces"
+msgstr "doit contenir un @ et pas d'espaces"
+
+#: lib/lucie/accounts/user.ex:52
+#, elixir-autogen, elixir-format
+msgid "email not permitted"
+msgstr "Adresse email non permis"
