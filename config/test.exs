@@ -39,3 +39,7 @@ config :phoenix, :plug_init_mode, :runtime
 config :phoenix_live_view,
   # Enable helpful, but potentially expensive runtime checks
   enable_expensive_runtime_checks: true
+
+config :lucie,
+       :allowed_emails,
+       (System.get_env("ALLOWED_EMAILS") || "") |> String.split(",") |> Enum.map(&String.trim(&1))

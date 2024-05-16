@@ -18,7 +18,7 @@ defmodule Lucie.AccountsFixtures do
     {:ok, user} =
       attrs
       |> valid_user_attributes()
-      |> Lucie.Accounts.register_user()
+      |> then(fn attrs -> Lucie.Accounts.register_user(attrs, allowed_emails: [attrs[:email]]) end)
 
     user
   end

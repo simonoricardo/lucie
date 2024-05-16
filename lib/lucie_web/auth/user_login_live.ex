@@ -8,14 +8,14 @@ defmodule LucieWeb.UserLoginLive do
         <%= dgettext("auth", "Log in to account") %>
         <:subtitle>
           <%= dgettext("auth", "Don't have an account") %>
-          <.link navigate={~p"/users/register"} class="font-semibold text-brand hover:underline">
+          <.link navigate={~p"/register"} class="font-semibold text-brand hover:underline">
             <%= dgettext("auth", "Sign up") %>
           </.link>
           <%= dgettext("auth", "for an account now.") %>
         </:subtitle>
       </.header>
 
-      <.simple_form for={@form} id="login_form" action={~p"/users/log_in"} phx-update="ignore">
+      <.simple_form for={@form} id="login_form" action={~p"/login"} phx-update="ignore">
         <.input field={@form[:email]} type="email" label={dgettext("auth", "Email")} required />
         <.input
           field={@form[:password]}
@@ -30,7 +30,7 @@ defmodule LucieWeb.UserLoginLive do
             type="checkbox"
             label={dgettext("auth", "Keep me logged in")}
           />
-          <.link href={~p"/users/reset_password"} class="text-sm font-semibold">
+          <.link href={~p"/reset_password"} class="text-sm font-semibold">
             <%= dgettext("auth", "Forgot your password?") %>
           </.link>
         </:actions>

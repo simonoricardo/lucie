@@ -43,14 +43,17 @@ defmodule Lucie.Accounts.User do
   end
 
   defp validate_email(changeset, opts) do
+    allowed_emails_from_opts = Keyword.get(opts, :allowed_emails, [])
     allowed_emails = Application.get_env(:lucie, :allowed_emails, [])
+
+    allowed_emails = allowed_emails_from_opts ++ allowed_emails
 
     changeset
     |> validate_required([:email])
+    |> validate_inclusion(:email, allowed_emails, message: gettext("email not permitted"))
     |> validate_format(:email, ~r/^[^\s]+@[^\s]+$/,
       message: gettext("must have the @ sign and no spaces")
     )
-    |> validate_inclusion(:email, allowed_emails, message: gettext("email not permitted"))
     |> validate_length(:email, max: 160)
     |> maybe_validate_unique_email(opts)
   end
@@ -58,7 +61,7 @@ defmodule Lucie.Accounts.User do
   defp validate_password(changeset, opts) do
     changeset
     |> validate_required([:password])
-    |> validate_length(:password, min: 12, max: 72)
+    |> validate_length(:password, min: 6, max: 72)
     # Examples of additional password validation:
     # |> validate_format(:password, ~r/[a-z]/, message: "at least one lower case character")
     # |> validate_format(:password, ~r/[A-Z]/, message: "at least one upper case character")

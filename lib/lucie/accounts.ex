@@ -73,9 +73,9 @@ defmodule Lucie.Accounts do
       {:error, %Ecto.Changeset{}}
 
   """
-  def register_user(attrs) do
+  def register_user(attrs, opts \\ []) do
     %User{}
-    |> User.registration_changeset(attrs)
+    |> User.registration_changeset(attrs, opts)
     |> Repo.insert()
   end
 
@@ -88,8 +88,10 @@ defmodule Lucie.Accounts do
       %Ecto.Changeset{data: %User{}}
 
   """
-  def change_user_registration(%User{} = user, attrs \\ %{}) do
-    User.registration_changeset(user, attrs, hash_password: false, validate_email: false)
+  def change_user_registration(%User{} = user, attrs \\ %{}, opts \\ []) do
+    base_opts = [hash_password: false, validate_email: false]
+    opts = Keyword.merge(base_opts, opts)
+    User.registration_changeset(user, attrs, opts)
   end
 
   ## Settings
@@ -122,7 +124,7 @@ defmodule Lucie.Accounts do
   """
   def apply_user_email(user, password, attrs) do
     user
-    |> User.email_changeset(attrs)
+    |> User.email_changeset(attrs, allowed_emails: [attrs[:email]])
     |> User.validate_current_password(password)
     |> Ecto.Changeset.apply_action(:update)
   end
@@ -148,7 +150,7 @@ defmodule Lucie.Accounts do
   defp user_email_multi(user, email, context) do
     changeset =
       user
-      |> User.email_changeset(%{email: email})
+      |> User.email_changeset(%{email: email}, allowed_emails: [email])
       |> User.confirm_changeset()
 
     Ecto.Multi.new()

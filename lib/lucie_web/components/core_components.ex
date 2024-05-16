@@ -385,7 +385,7 @@ defmodule LucieWeb.CoreComponents do
         ]}
         {@rest}
       />
-      <.error :for={msg <- @errors}><%= msg %></.error>
+      <.error :if={not Enum.empty?(@errors)}><%= List.first(@errors) %></.error>
     </div>
     """
   end
