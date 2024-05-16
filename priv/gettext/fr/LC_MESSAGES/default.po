@@ -52,12 +52,12 @@ msgstr "Problème de connexion"
 msgid "close"
 msgstr "Fermer"
 
-#: lib/lucie/accounts/user.ex:50
+#: lib/lucie/accounts/user.ex:51
 #, elixir-autogen, elixir-format
 msgid "must have the @ sign and no spaces"
 msgstr "doit contenir un @ et pas d'espaces"
 
-#: lib/lucie/accounts/user.ex:52
+#: lib/lucie/accounts/user.ex:53
 #, elixir-autogen, elixir-format
 msgid "email not permitted"
 msgstr "Adresse email non permis"

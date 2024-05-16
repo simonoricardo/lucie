@@ -1,0 +1,95 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:13
+#, elixir-autogen, elixir-format
+msgid "Already registered?"
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:44
+#, elixir-autogen, elixir-format
+msgid "Confirm password"
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:50
+#, elixir-autogen, elixir-format
+msgid "Create an account"
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:49
+#, elixir-autogen, elixir-format
+msgid "Creating account..."
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "Don't have an account"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:19
+#: lib/lucie_web/auth/user_registration_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "Forgot your password?"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:31
+#, elixir-autogen, elixir-format
+msgid "Keep me logged in"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:39
+#: lib/lucie_web/auth/user_registration_live.ex:15
+#, elixir-autogen, elixir-format
+msgid "Log in"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:8
+#, elixir-autogen, elixir-format
+msgid "Log in to account"
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:31
+#, elixir-autogen, elixir-format
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:23
+#: lib/lucie_web/auth/user_registration_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Register for an account"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Sign up"
+msgstr ""
+
+#: lib/lucie_web/auth/user_login_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "for an account now."
+msgstr ""
+
+#: lib/lucie_web/auth/user_registration_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "to your account now"
+msgstr ""
